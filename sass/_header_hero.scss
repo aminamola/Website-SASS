@@ -1,0 +1,58 @@
+header{
+    padding: 15px 0;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    img{
+        width: 150px;
+    }
+}
+
+.hero{
+    padding: 40px 0;
+    text-align: center;
+
+    .desc{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0;
+
+        h1{
+            color: $dark_cyan;
+            margin-bottom: 30px;
+            font-size: 35px;
+        }
+
+        p{
+            color: $dark_cyan;
+            margin-bottom: 50px;
+            line-height: 1.5;
+            font-size: 18px;
+        }
+        &{
+            @include max-w(sm){
+                h1{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    img{
+        margin-top: 30px;
+        position: relative;
+        max-width: 100%;
+        animation: up-and-down 5s infinite;
+        -webkit-animation: up-and-down 5s infinite;
+}
+
+}

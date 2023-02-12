@@ -1,0 +1,88 @@
+.btn-header{
+    color: $pink;
+    padding: 8px 30px;
+    border: 1px solid $pink;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: hsla(321, 100%, 78%, 0.625) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+%btn{
+    color: $pale_blue;
+    background-color: $pink;
+    box-shadow: $shadow ;
+    cursor: pointer;
+    border: 1px solid $pink;
+}
+.btn-main{
+    @extend %btn;
+    font-size: 28px;
+    padding: 20px 60px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.btn-sec{
+    @extend %btn;
+    font-size: 20px;
+    padding: 15px 40px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+
+@include max-w(sm){
+    .btn-header{
+        font-size: 10px;
+        padding: 5px;
+    }
+    .btn-main,
+    .btn-sec{
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+.subscribe{
+    display: inline-block;
+    @extend %btn;
+    padding: 8px 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    @include max-w(md){
+        margin: 10px 0;
+    }
+}
+
+.btn_icon{
+    color: $pale_blue;
+    background-color: transparent;
+    
+    :hover{
+        color: $pink;
+    }
+    &:hover{
+        .fa-square-facebook{
+            color: $facebook;
+        }
+        .fa-instagram{
+            color: $instagram;
+        }
+        .fa-square-twitter{
+            color: $twitter;
+        }
+    }
+}

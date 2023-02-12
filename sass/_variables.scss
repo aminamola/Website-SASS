@@ -1,0 +1,67 @@
+// Layout //
+// The designs were created to the following widths:
+//
+//- Mobile: 375px
+//- Desktop: 1440px
+//
+
+
+// Colors //
+
+// Primary
+$pink : hsl(322, 100%, 66%);
+$light_pink:hsl(321, 100%, 78%);
+$light_red:hsl(0, 100%, 63%);
+
+
+// Neutral
+$dark_cyan: hsl(192, 100%, 9%);
+$pale_blue: hsl(207, 100%, 98%);
+
+// Socials colors
+$facebook: #1877F2;
+$instagram: #E4405F;
+$twitter: #1DA1F2;
+
+// media + container
+$xs: 376px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1024px;
+$xxl: 1200px;
+
+$media: (
+    xs: $xs, //--max-width 376px
+    sm: $sm, //--min-width...
+    md: $md,
+    lg: $lg,
+    xl: $xl,
+    xxl: $xxl
+);
+
+$col-xs:320px; 
+$col-sm: 560px;  // ()
+$col-md: 740px;  // ()
+$col-lg: 970px;  // ()
+$col-xl: 1000px; // ()
+
+$col-media: (
+    col-xs: $col-xs,
+    col-sm: $col-sm, 
+    col-md: $col-md, 
+    col-lg: $col-lg,
+    col-xl: $col-xl,
+);
+
+// shadow
+$shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+// grid
+
+$grid_cols :12;
+@for $i from 1  through 12{
+    .col-#{$i}{
+        width: percentage($i / $grid_cols);
+    }
+}
